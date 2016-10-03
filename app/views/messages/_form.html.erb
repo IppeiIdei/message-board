@@ -1,5 +1,5 @@
-<%= form_for(@message) do |f| %>
-  <% if @message.errors.present? %>
+<%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
+ <% if @message.errors.present? %>
     <div class="alert alert-danger">
       <%= alert %>
       <ul>
@@ -11,8 +11,6 @@
       </ul>
     </div>
   <% end %>
-
-<%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
     <div class="form-group">
          <label for="message_name" class="col-sm-2 control-label">名前</label>
          <div class='col-sm-10'>
